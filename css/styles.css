@@ -556,15 +556,14 @@ footer .logo > span {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.3);
+    : transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     width: 408px;
     border-radius: 4px;
     min-height: 584px;
-    padding: 24px;
+    padding: 72px 24px 24px 24px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     background-color: var(--dairy);
     opacity: 0;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0s;
 }
 
 .backdrop.is-open .modal {
@@ -581,6 +580,8 @@ footer .logo > span {
     background-color: var(--cornflower);
     border-radius: 50%;
     border: 1px solid rgb(0 0 0 / 10%);
+    padding: 0;
+    cursor: pointer;
     width: 24px;
     height: 24px;
     top: 24px;
@@ -594,14 +595,21 @@ footer .logo > span {
     background-color: var(--ocean);
 }
 
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:focus .modal-close-icon{
+    fill: var(--brand-color);
+}
+
+.modal-close-btn:focus {
+    var(--ocean);
+    border: none;
+}
+
 .modal-close-icon {
     transition: var(--animation);
     transition-property: fill;
 }
 
-.modal-close-btn:hover .modal-close-icon {
-    fill: var(--white);
-}
 
 .modal-caption {
     font-weight: 500;
@@ -610,7 +618,6 @@ footer .logo > span {
     letter-spacing: 0.02em;
     text-align: center;
     color: var(--navy-blue);
-    padding-top: 48px;
     margin-bottom: 16px;
 }
 
