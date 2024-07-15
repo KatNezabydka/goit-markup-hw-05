@@ -568,7 +568,6 @@ footer .logo > span {
 
 .backdrop.is-open .modal {
     opacity: 1;
-    transition-delay: 400ms;
 }
 
 .modal-close-btn {
